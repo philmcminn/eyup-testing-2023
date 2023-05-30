@@ -15,7 +15,7 @@ public class FindLastTest {
         int[] x = {1, 0};
 
         // note that this will fail!
-        // assertThat(BuggyClass.findLast(x, 1), equalTo(0));
+        // assertEquals(0, BuggyClass.findLast(x, 1));
 
         assertEquals(0, FixedClass.findLast(x, 1));
     }
@@ -32,7 +32,7 @@ public class FindLastTest {
 
     // (c) A JUnit test that executes the defect but does not cause a failure
     @Test
-    public void testFind_ExecutesDefectButNoFailure() {
+    public void findLast_ExecutesDefectButNoFailure() {
         // anything where y is not in x
         // (e) the state is infected because the first index of x not considered.
         // However, because y is not in x anyway, the method behaves correctly
